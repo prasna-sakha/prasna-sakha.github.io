@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links start -->
+
+    <!-- Google Fonts start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Redressed&family=Shizuru&display=swap"
+        rel="stylesheet">
+    <!-- Google Fonts end -->
+
+    <!-- Font Awesome starts -->
+    <script src="https://kit.fontawesome.com/32c35fdad1.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome ends -->
+
+    <!-- CSS Links start-->
+    <link rel="stylesheet" href="/CSS/resep-menu.css">
+    <!-- CSS Links end-->
+
+    <!-- Links end -->
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <div title="Ngeunah" class="judul"><a href="index.html">ngeunah</a></div>
+            <div class="nav-div-1">
+                <div class="btn-nav">
+                    <a href="javascript:void(0)" title="Pergi ke Navigasi Utama" onclick="openNav()">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+                </div>
+                <div class="log-fav">
+                    <a href="" title="kotak Resep dan Pengaturan akun">
+                        <i class="fa-solid fa-heart"></i>
+                        <span class="num">0</span>
+                        <span class="indicator">kotak resep anda</span>
+                    </a>
+                </div>
+            </div>
+            <div class="nav-div-2">
+                <div class="sosmed">
+                    <span>follow</span>
+                    <a href="#facebook" title="Ngeunah di Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#Twitter" title="Ngeunah di Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#Instagram" title="Ngeunah di Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="search-nav">
+                    <a href="" title="Tampilkan pencarian">
+                        <span>cari</span><i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="side-nav" id="side-nav">
+                <div class="links">
+                    <a href="javascript:void(0);" onclick="closeNav()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                    <img src="/IMG/Polish_Jerry.jpg" alt="Your Profile Pictures" title="Your Profile Pictures">
+                    <a href="/HTML/resep-menu.html" title="Tampilkan Konten Resep dan Menu Terbaru" class="active">resep
+                        & menu</a>
+                    <a href="/HTML/tips-tricks.html" title="Tampilkan Konten Tips dan Tricks Terbaru">tips & tricks</a>
+                    <a href="/HTML/acara.html" title="Tampilkan Konten Acara Terbaru">acara</a>
+                    <a href="/HTML/video.html" title="Tampilkan Video Ngeunah">video</a>
+                </div>
+                <div class="fol-log">
+                    <span>follow ngeunah</span>
+                    <div class="sosmed-2">
+                        <a href="#Facebook" title="Ngeunah di Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#Twitter" title="Ngeunah di Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#Instagram" title="Ngeunah di Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <a href="#Login" title="Log Out" class="log-in-out">
+                        login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        var small = window.matchMedia("(max-width: 768px)")
+        function openNav() {
+            if (small.matches) {
+                document.getElementById("side-nav").style.width = "100%";
+                document.getElementById("side-nav").style.left = "0";
+            } else {
+                document.getElementById("side-nav").style.left = "0";
+            }
+
+        }
+
+        function closeNav() {
+            if (small.matches) {
+                document.getElementById("side-nav").style.width = "320px";
+                document.getElementById("side-nav").style.left = "";
+            } else {
+                document.getElementById("side-nav").style.left = "";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

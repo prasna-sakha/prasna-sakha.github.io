@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    text-transform: capitalize;
+}
+
+.navbar * {
+    /* border: 1px solid black;
+    box-sizing: border-box; */
+}
+
+.side-nav {
+  height: 100%;
+  width: 320px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -320px;
+  background-color: #333333;
+  overflow-x: hidden;
+  transition: 1s cubic-bezier(.5,0,0,.5);
+  padding-top: 60px;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+}
+
+.links * {
+    /* border: 1px solid white; */
+}
+
+.links a:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px 20px;
+    font-size: 30px;
+}
+
+.links img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.links h2 {
+    font-family: 'Redressed';
+    font-size: 40px;
+    font-weight: 500;
+    color: red;
+}
+
+.links a {
+    font-family: poppins;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+}
+
+.links a:hover {
+    color: red;
+}
+
+.links a.active {
+    color: red;
+}
+
+.fol-log {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    color: white;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+.fol-log * {
+    /* border: 1px solid black; */
+}
+
+.sosmed-2 {
+    display: flex;
+    column-gap: 20px;
+    justify-content: space-between;
+}
+
+.sosmed-2 a{
+    font-size: 34px;
+    color: red;
+}
+
+.log-in-out {
+    margin-top: 20px;
+    padding: 5px 30px;
+    text-decoration: none;
+    font-family: poppins;
+    font-weight: 600;
+    font-size: 20px;
+    color: red;
+    border: 1px solid red;
+    transition: .3s;
+}
+
+.log-in-out:hover {
+    background-color: red;
+    color: white;
+}
+
+.btn-nav {
+    margin-left: 20px;
+}
+
+.btn-nav a {
+    color: rgba(0, 0, 0, 1);
+    font-size: 26px;
+}
+
+.log-fav {
+    position: relative;
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+}
+.log-fav a {
+    text-decoration: none;
+    color: red;
+}
+
+.log-fav a:hover .indicator, .log-fav a:hover .num {
+    text-decoration: underline;
+}
+
+.log-fav i {
+    position: absolute;
+    font-size: 34px;
+    color: red;
+    top: -4px; left: 4px;
+}
+
+.log-fav .indicator {
+    margin-left: 50px;
+}
+
+.log-fav .num {
+    position: absolute;
+    left: 24px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: red;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.navbar span {
+    font-size: 12px;
+    font-family: poppins;
+    font-weight: 600;
+}
+
+.judul {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.judul a {
+    font-family: 'Redressed';
+    font-size: 38px;
+    text-decoration: none;
+    color: red;
+}
+
+.nav-div-1, .nav-div-2{
+    display: flex;
+    flex-grow: 1;
+}
+
+.nav-div-2 {
+    justify-content: end;
+    column-gap: 20px;
+}
+
+.sosmed {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    color: rgba(0, 0, 0, .4);
+}
+
+.sosmed a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: red;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.search-nav {
+    position: relative;
+    top: 2px;
+    margin-right: 20px;
+}
+
+.search-nav a {
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+    text-decoration: none;
+    color: rgba(0, 0, 0, .4);
+}
+
+.search-nav a:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+
+.search-nav i {
+    position: relative;
+    top: 4px;
+    font-size: 24px;
+}
+
+.judul {order: 3;}
+.nav-div-1 {order: 2;}
+.nav-div-2 {order: 4;}
+.side-nav {order: 1;}

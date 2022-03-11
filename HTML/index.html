@@ -1,0 +1,330 @@
+<!-- بِسْــــــــــــــــــمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links start -->
+
+    <!-- Favicon starts -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../Ngeunah.ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../Ngeunah.ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../Ngeunah.ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../Ngeunah.ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../Ngeunah.ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../Ngeunah.ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../Ngeunah.ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../Ngeunah.ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../Ngeunah.ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../Ngeunah.ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../Ngeunah.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../Ngeunah.ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Ngeunah.ico/favicon-16x16.png">
+    <link rel="manifest" href="../Ngeunah.ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../Ngeunah.ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Favicon ends -->
+
+    <!-- Google Fonts start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Redressed&family=Shizuru&display=swap"
+        rel="stylesheet">
+    <!-- Google Fonts end -->
+
+    <!-- Font Awesome starts -->
+    <script src="https://kit.fontawesome.com/32c35fdad1.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome ends -->
+
+    <!-- CSS Links start-->
+    <link rel="stylesheet" href="../CSS/index.css">
+    <!-- CSS Links end-->
+
+    <!-- Links end -->
+
+    <title>Ngeunah</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar" id="navbar">
+            <div title="Ngeunah" class="judul"><a href="index.html">ngeunah</a></div>
+            <div class="btn-side-nav">
+                <a href="javascript:void(0)" title="Pergi ke Navigasi Utama" onclick="openNav()">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </div>
+            <div class="log-fav">
+                <a href="/HTML/akun/saved.html" title="kotak Resep dan Pengaturan akun">
+                    <i class="fa-solid fa-heart"></i>
+                    <span class="num">0</span>
+                    <span class="indicator">kotak resep anda</span>
+                </a>
+            </div>
+            <div class="sosmed">
+                <span>follow</span>
+                <a href="#facebook" title="Ngeunah di Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#Twitter" title="Ngeunah di Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#Instagram" title="Ngeunah di Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="search-nav">
+                <a href="javascript:void(0)" title="Tampilkan pencarian" onclick="openOverlay()">
+                    <span>cari</span><i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </div>
+            <div class="side-nav" id="side-nav">
+                <div class="links" id="links">
+                    <a href="javascript:void(0);" onclick="closeNav()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                    <img src="/IMG/Polish_Jerry.jpg" alt="Your Profile Pictures" title="Your Profile Pictures">
+                    <a href="/HTML/resep-menu.html" title="Tampilkan Konten Resep dan Menu Terbaru">resep & menu</a>
+                    <a href="/HTML/tips-tricks.html" title="Tampilkan Konten Tips dan Tricks Terbaru">tips & tricks</a>
+                    <a href="/HTML/acara.html" title="Tampilkan Konten Acara Terbaru">acara</a>
+                    <a href="/HTML/video.html" title="Tampilkan Video Ngeunah">video</a>
+                </div>
+                <div class="fol-log" id="fol-log">
+                    <span>follow ngeunah</span>
+                    <div class="sosmed-2">
+                        <a href="#Facebook" title="Ngeunah di Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#Twitter" title="Ngeunah di Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#Instagram" title="Ngeunah di Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <a href="#Login" title="Log Out" class="log-in-out">
+                        login
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar" id="navbar-2">
+            <div title="Ngeunah" class="judul"><a href="index.html">ngeunah</a></div>
+            <div class="btn-side-nav">
+                <a href="javascript:void(0)" title="Pergi ke Navigasi Utama" onclick="openNav()">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </div>
+            <div class="log-fav">
+                <a href="/HTML/akun/saved.html" title="kotak Resep dan Pengaturan akun">
+                    <i class="fa-solid fa-heart"></i>
+                    <span class="num">0</span>
+                    <span class="indicator">kotak resep anda</span>
+                </a>
+            </div>
+            <div class="sosmed">
+                <span>follow</span>
+                <a href="#facebook" title="Ngeunah di Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#Twitter" title="Ngeunah di Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#Instagram" title="Ngeunah di Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="search-nav">
+                <a href="javascript:void(0)" title="Tampilkan pencarian" onclick="openOverlay()">
+                    <span>cari</span><i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </div>
+            <div class="side-nav" id="side-nav">
+                <div class="links" id="links">
+                    <a href="javascript:void(0);" onclick="closeNav()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                    <img src="/IMG/Polish_Jerry.jpg" alt="Your Profile Pictures" title="Your Profile Pictures">
+                    <a href="/HTML/resep-menu.html" title="Tampilkan Konten Resep dan Menu Terbaru">resep & menu</a>
+                    <a href="/HTML/tips-tricks.html" title="Tampilkan Konten Tips dan Tricks Terbaru">tips & tricks</a>
+                    <a href="/HTML/acara.html" title="Tampilkan Konten Acara Terbaru">acara</a>
+                    <a href="/HTML/video.html" title="Tampilkan Video Ngeunah">video</a>
+                </div>
+                <div class="fol-log" id="fol-log">
+                    <span>follow ngeunah</span>
+                    <div class="sosmed-2">
+                        <a href="#Facebook" title="Ngeunah di Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#Twitter" title="Ngeunah di Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#Instagram" title="Ngeunah di Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <a href="#Login" title="Log Out" class="log-in-out">
+                        login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero parts start -->
+    <div class="hero-image">
+        <div class="hero-text">
+            <h2>temukan resep</h2>
+            <a href="javascript:void(0)" onclick="openOverlay()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+            <a href="" title="Pencarian Lebih Lanjut">pencarian lebih lanjut <i class="fa-solid fa-angle-right"></i></a>
+        </div>
+    </div>
+    <div class="search-overlay" id="search-overlay">
+        <a href="javascript:void(0)" onclick="closeOverlay()">
+            <i class="fa-solid fa-xmark"></i>
+        </a>
+        <form action="" method="post">
+            <button type="submit" onclick=""><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input type="text" placeholder="Cari Resep">
+            </input>
+        </form>
+    </div>
+    <!-- Hero part end-->
+
+    <main>
+        <div class="all-trend">
+            <div class="trend">
+                <h2 class="sub-judul-trend poppins">yang lagi trending</h2>
+                <a href="#" title="kue vanilla topping coklat, hadiah untuk yang tersayang">
+                    <div class="trend-image">
+                        <img src="../IMG/Hero/kue-potong.jpg">
+                        <div class="border"></div>
+                    </div>
+                    <div class="desc-trend poppins">
+                        <span>acara</span>
+                        <hr>
+                        <span>kue vanilla topping coklat, hadiah untuk yang tersayang</span>
+                    </div>
+                </a>
+            </div>
+            <hr class="divider">
+            <div class="sub trend">
+                <a href="#" title="roti enak yang bikin anak mau makan lagi">
+                    <div class="trend-image">
+                        <img src="../IMG/Hero/roti-potong.jpg">
+                    </div>
+                    <div class="desc-trend poppins">
+                        <span>acara</span>
+                        <hr>
+                        <span>roti enak yang bikin anak mau makan lagi</span>
+                    </div>
+                </a>
+            </div>
+            <hr class="divider">
+            <div class="sub trend">
+                <a href="#" title="roti enak lagi">
+                    <div class="trend-image">
+                        <img src="../IMG/Hero/macam-roti.jpg">
+                    </div>
+                    <div class="desc-trend poppins">
+                        <span>acara</span>
+                        <hr>
+                        <span>roti enak lagi</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="tips-tricks">
+            <hr class="divider-top">
+            <span class="upper">tips & tricks</span>
+            <a href="#" title="Makanan Sehat" class="tips-tricks-image">
+                <img src="../IMG/Hero/sayuran.jpg" alt="" class="">
+            </a>
+            <div class="desc-tips-tricks poppins">
+                <a href="#" title="Makanan Sehat">makanan sehat</a>
+                <hr class="divider-judul">
+                <span>Masakan enak dan sehat akan membuat hidup kita lebih sehat. Pelajarilah cara membuat makanan yang
+                    sehat untuk keluarga.</span>
+                <a href="#" title="Tampilkan Lebih Lanjut" class="tampil-lanjut capi">tampilkan lebih lengkap <i
+                        class="fa-solid fa-angle-right"></i></a>
+            </div>
+            <hr class="tilt-divider">
+            <div class="other-tips-tricks poppins">
+                <a href="#" class="sub-tips-tricks">
+                    <div class="image">
+                        <img src="../IMG/Hero/daging.jpg" alt="">
+                    </div>
+                    <span>Cara membuat steak yang empuk dan mudah dicerna</span>
+                </a>
+                <a href="#" class="sub-tips-tricks">
+                    <div class="image">
+                        <img src="../IMG/Hero/daging.jpg" alt="">
+                    </div>
+                    <span>Cara membuat steak yang empuk dan mudah dicerna</span>
+                </a>
+                <a href="#" class="sub-tips-tricks">
+                    <div class="image">
+                        <img src="../IMG/Hero/daging.jpg" alt="">
+                    </div>
+                    <span>Cara membuat steak yang empuk dan mudah dicerna</span>
+                </a>
+                <a href="#" title="Tampilkan Lebih Lanjut" class="tampil-lanjut capi">tampilkan lebih lengkap <i
+                        class="fa-solid fa-angle-right"></i></a>
+            </div>
+        </div>
+        <div class="resep-terbaru poppins">
+            <div class="rata-lagi">
+                <div class="bungkus-judul">
+                    <hr class="inline">
+                    <h2 class="judul">resep terbaru kami</h2>
+                </div>
+                <div class="bungkus-resep-baru capi">
+                    <a href="#" class="resep-baru" id="resep-baru1">
+                        <div class="image">
+                            <img src="../IMG/Polish_Jerry.jpg" alt="">
+                        </div>
+                        <span class="nama">tikus nyengir 1</span>
+                        <span class="acara">troll</span>
+                    </a>
+                    <a href="#" class="resep-baru" id="resep-baru2">
+                        <div class="image">
+                            <img src="../IMG/Polish_Jerry.jpg" alt="">
+                        </div>
+                        <span class="nama">tikus nyengir 2</span>
+                        <span class="acara">troll</span>
+                    </a>
+                    <a href="#" class="resep-baru" id="resep-baru3">
+                        <div class="image">
+                            <img src="../IMG/Polish_Jerry.jpg" alt="">
+                        </div>
+                        <span class="nama">tikus nyengir 3</span>
+                        <span class="acara">troll</span>
+                    </a>
+                    <a href="#" class="resep-baru" id="resep-baru4">
+                        <div class="image">
+                            <img src="../IMG/Polish_Jerry.jpg" alt="">
+                        </div>
+                        <span class="nama">tikus nyengir 4</span>
+                        <span class="acara">troll</span>
+                    </a>
+                    <a href="#" class="resep-baru" id="resep-baru5">
+                        <div class="image">
+                            <img src="../IMG/Polish_Jerry.jpg" alt="">
+                        </div>
+                        <span class="nama">tikus nyengir 5</span>
+                        <span class="acara">troll</span>
+                    </a>
+                </div>
+                <div class="slide-nav">
+                    <button type="button" class="left" id="swipeLeft" onclick="swipeLeft()">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <button type="button" class="right" id="swipeRight" onclick="swipeRight()">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="slide-indicator">
+                    <div class="dot" id="dot1"></div>
+                    <div class="dot" id="dot2"></div>
+                    <div class="dot" id="dot3"></div>
+                    <div class="dot" id="dot4"></div>
+                    <div class="dot" id="dot5"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links"></div>
+        <div class="copyright"></div>
+    </footer>
+
+    <script src="../JS/index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1309 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.poppins { font-family: poppins; }
+.semibold { font-weight: 600; }
+.capi { text-transform: capitalize; }
+.upper { text-transform: uppercase; }
+
+body {
+    position: relative;
+    height: fit-content;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Header Doank Starts */
+.navbar:first-of-type {
+    position: fixed;
+    top: -60px;
+    z-index: 2;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    transition: 300ms 800ms;
+}
+
+.navbar:last-of-type {
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    transition: 300ms;
+}
+
+/* .navbar:last-of-type .btn-side-nav a, .navbar:last-of-type .judul a, .indicator, .sosmed span, .navbar:last-of-type .search-nav a {
+    color: rgba(255, 255, 255, .8);
+}  */
+
+.navbar:last-of-type .btn-side-nav a, .navbar:last-of-type .judul a, .navbar:last-of-type .indicator, .sosmed span, .navbar:last-of-type .search-nav a {
+    color: rgba(255, 255, 255, .8);
+} 
+
+/* .navbar:last-of-type *:not(.log-fav i, .num, .sosmed a) {
+    color: rgba(255, 255, 255, .8)
+} */
+
+.navbar:last-of-type *:not(.log-fav i, .num, .sosmed a):hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.navbar * {
+    /* border: 1px solid black;
+    box-sizing: border-box; */
+}
+
+.side-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #333333;
+  overflow-x: hidden;
+  transition: 1s cubic-bezier(.5,0,0,.5);
+  padding-top: 60px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.side-nav::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.side-nav {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.links{
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    transition: 1s .5s;
+}
+
+.links * {
+    /* border: 1px solid white; */
+}
+
+.links a:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px 20px;
+    font-size: 30px;
+}
+
+.links img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.links h2 {
+    font-family: 'Redressed';
+    font-size: 40px;
+    font-weight: 500;
+    color: red;
+}
+
+.links a {
+    font-family: poppins;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+}
+
+.links a:hover {
+    color: red;
+}
+
+.fol-log {
+    opacity: 0;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    color: white;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+    transition: 1s .5s;
+    /* border: 1px solid black; */
+}
+
+.fol-log * {
+    /* border: 1px solid black; */
+}
+
+.sosmed-2 {
+    display: flex;
+    column-gap: 20px;
+    justify-content: space-between;
+}
+
+.sosmed-2 a{
+    font-size: 34px;
+    color: red;
+}
+
+.log-in-out {
+    margin-top: 20px;
+    padding: 5px 30px;
+    text-decoration: none;
+    font-family: poppins;
+    font-weight: 600;
+    font-size: 20px;
+    color: red;
+    border: 1px solid red;
+    transition: .3s;
+}
+
+.log-in-out:hover {
+    background-color: red;
+    color: white;
+}
+
+.btn-side-nav {
+    position: absolute;
+    left: 20px;
+}
+
+.btn-side-nav a {
+    color: rgba(0, 0, 0, .4);
+    font-size: 26px;
+}
+
+.btn-side-nav a:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+.log-fav {
+    position: absolute;
+    left: 60px;
+    display: flex;
+    align-items: center;
+}
+.log-fav a {
+    text-decoration: none;
+    color: red;
+}
+
+.log-fav a:hover .indicator, .log-fav a:hover .num {
+    text-decoration: underline;
+}
+
+.log-fav i {
+    position: absolute;
+    font-size: 34px;
+    color: red;
+    top: -10px; left: 4px;
+}
+
+.log-fav .indicator {
+    margin-left: 50px;
+}
+
+.log-fav .num {
+    position: absolute;
+    left: 24px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: red;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.navbar span {
+    font-size: 12px;
+    font-family: poppins;
+    font-weight: 600;
+}
+
+.judul a {
+    font-family: 'Redressed';
+    font-size: 38px;
+    text-decoration: none;
+    color: red;
+}
+
+.sosmed {
+    position: absolute;
+    right: 100px;
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+    color: rgba(0, 0, 0, .4);
+}
+
+.sosmed a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: red;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.search-nav {
+    position: absolute;
+    right: 20px;
+}
+
+.search-nav a {
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+    text-decoration: none;
+    color: rgba(0, 0, 0, .4);
+}
+
+.search-nav a:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+
+.search-nav i {
+    position: relative;
+    top: 4px;
+    font-size: 24px;
+}
+
+.judul {order: 4;}
+.btn-side-nav {order: 2 ;}
+.log-fav {order: 3;}
+.sosmed {order: 5;}
+.search-nav {order:  6;}
+.side-nav {order: 1;}
+/* Header Doank Ends */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// *//* Hero start*/
+.hero-image {
+    /* margin-top: 60px; */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/IMG/Hero/daging.jpg");
+    height: 560px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    /* border: 1px solid red; */
+}
+
+.hero-text h2 {
+    font-family: poppins;
+    font-size: 56px;
+    text-transform: capitalize;
+}
+
+.hero-text a:first-of-type {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin: auto;
+    width: 650px;
+    height: 60px;
+    color: rgba(0, 0, 0, .4);
+    background-color: rgba(255, 255, 255, .4);
+}
+
+.hero-text a:first-of-type i  {
+    font-size: 26px;
+    margin-left: 20px;
+}
+
+.hero-text a:last-of-type  {
+    margin-top: 20px;
+    color: white;
+    font-family: poppins;
+    font-size: 16px;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.hero-text a:last-of-type:hover  {
+    text-decoration: underline;
+}
+
+.for-blur {
+    background-color: rgba(255, 255, 255, .95);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+}
+
+.search-overlay {
+    background-color: rgba(255, 255, 255, .95);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: 500ms ;
+    backdrop-filter: blur(5px);
+}
+
+.search-overlay a {
+    position: fixed;
+    top: 140px;
+    margin-left: 760px;
+    display: flex;
+    color: rgba(0, 0, 0, .4);
+    font-family: poppins;
+    font-size: 26px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.search-overlay a:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+
+.search-overlay form {
+    position: fixed;
+    top: 170px;
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    height: 100px;
+    border-bottom: 1px solid rgba(0, 0, 0, .4);
+}
+
+.search-overlay form button, input {
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: poppins;
+    color: rgba(0, 0, 0, .4);
+}
+
+.search-overlay form button {
+    flex-grow: 0; 
+}
+.search-overlay form button:hover { color: black; }
+
+.search-overlay form input {
+    width: 0;
+    flex-grow: 1; 
+    outline: none;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.search-overlay form input:focus { color: black; }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(200, 200, 200);
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgb(200, 200, 200);
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgb(200, 200, 200);
+} 
+/* Hero ends */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Main starts */
+
+main {
+    /* border: 1px solid black; */
+    /* box-sizing: border-box; */
+    width: 1010px;
+    margin: auto;
+}
+
+/* trend starts */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.all-trend {
+    margin: 60px auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.trend:first-of-type {
+    /* margin-bottom: 80px; */
+}
+
+.trend {
+    width: 100%;
+}
+
+.trend a {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    display: inline-block;
+    margin: auto;
+    width: 100%;
+    text-decoration: none;
+    color: unset;
+}
+
+.trend a:hover .desc-trend span:last-of-type{ 
+    text-decoration: underline;
+}
+
+
+.sub-judul-trend {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    font-size: 48px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+}
+
+.trend-image {
+    position: relative;
+    margin: auto;
+    /* width: 100%; */
+    /* border: 2px solid brown; */
+    height: 300px;
+    overflow: hidden;
+}
+
+
+.trend-image img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.trend-image .border {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 90%;
+    border: 2px solid white;
+}
+
+.desc-trend {
+    position: relative;
+    background-color: white;
+    width: 500px;
+    margin: -40px auto 0px auto;
+}
+
+.desc-trend span, hr {
+    margin: 0px auto 4px auto;
+}
+
+.desc-trend hr {
+    width: 80px;
+    color: transparent;
+    border-color: rgba(0, 0, 0, .4);
+}
+
+.desc-trend span {
+    display: block;
+    text-align: center;
+    /* border: 1px solid black; */
+}
+
+.desc-trend span:first-of-type {
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, .4);
+    font-size: 18px;
+}
+
+.desc-trend span:last-of-type {
+    font-size: 28px;
+    padding: 0px 20px;
+    box-sizing: border-box;
+}
+
+.divider {
+    display: none;
+    width: 100%;
+    border: 1 solid rgba(0, 0, 0, .4);
+}
+
+.sub.trend {
+    width: 45%;
+}
+
+.sub.trend a {
+    width: 100%;
+}
+
+.sub.trend .trend-image {
+    width: 100%;
+    height: 240px
+}
+
+.sub.trend .desc-trend {
+    margin: auto;
+    width: 100%;
+}
+
+.sub.trend .desc-trend hr {
+    border-color: rgba(0, 0, 0, .4);
+}
+
+.sub.trend .desc-trend span:last-of-type {
+    /* border: 1px solid black; */
+    font-size: 20px;
+}
+
+.sub.trend * {
+    /* border: 1px solid black; */
+    /* box-sizing: border-box; */
+}
+
+/* trend ends */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* tips-tricks start */
+
+
+.tips-tricks {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    position: relative;
+    margin: auto;
+    width: 100%;
+}
+
+.tips-tricks .divider-top {
+    position: absolute;
+    display: block;
+    top: -60px;
+    width: 100%;
+}
+
+.tips-tricks .upper {
+    position: absolute;
+    display: block;
+    padding: 10px 30px;
+    font-family: poppins;
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    background-color: red;
+    left: 50%;
+    top: -25px;
+    transform: translate(-50%);
+    z-index: 1;
+    /* transition: 500ms; */
+}
+
+.tips-tricks-image {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.tips-tricks-image img{
+    width: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tips-tricks-image:hover ~ .desc-tips-tricks a:first-of-type{
+    text-decoration: underline;
+}
+
+.desc-tips-tricks {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.desc-tips-tricks a:first-of-type {
+    font-size: 34px;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: unset;
+}
+
+.desc-tips-tricks a:first-of-type:hover { 
+    text-decoration: underline;
+}
+
+.desc-tips-tricks .divider-judul {
+    display: none;
+    width: 60px;
+}
+
+.desc-tips-tricks .tampil-lanjut {
+    width: fit-content;
+    text-decoration: none;
+    color: red;
+}
+
+.desc-tips-tricks .tampil-lanjut:hover {
+    text-decoration: underline;
+}
+
+.desc-tips-tricks span { 
+    font-size: 16px;
+}
+
+.tips-tricks .tilt-divider {
+    position: absolute;
+    left: 50%;
+    bottom: 1%;
+    transform: translate(-50%);
+    height: 38%;
+}
+
+.other-tips-tricks {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+    row-gap: 20px;
+    box-sizing: border-box;
+}
+
+.other-tips-tricks .tampil-lanjut {
+    display: none;
+    text-decoration: none;
+    color: red;
+}
+
+.other-tips-tricks .tampil-lanjut:hover {
+    text-decoration: underline;
+}
+
+.sub-tips-tricks {
+    display: flex;
+    text-decoration: none;
+    color: unset;
+}
+
+.sub-tips-tricks:hover {
+    text-decoration: underline;
+}
+.sub-tips-tricks .image {
+    position: relative;
+    width: 30%;
+    /* border: 1px solid black; */
+    overflow: hidden;
+}
+
+.sub-tips-tricks .image img {
+    width: 100%;
+    /* height: auto; */
+    position: relative;
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    transform: scale(1.2);
+}
+
+.sub-tips-tricks span {
+    display: block;
+    font-weight: 600; 
+    width: 70%;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+.sub-tips-tricks a{
+    text-decoration: none;
+}
+
+/* tips-tricks ends */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* resep-terbaru start */
+
+.resep-terbaru {
+    position: relative;
+    left: -25%;
+    width: 150%;
+    height: fit-content;
+    padding-bottom: 280px;
+    background-color: #f1f2f2;
+}
+
+.rata-lagi {
+    position: relative;
+    width: 1010px;
+    margin: auto;
+    /* border: 1px solid black; */
+}
+
+.bungkus-judul {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    position: relative;
+    /* border: 1px solid black; */
+}
+
+.resep-terbaru .inline {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.resep-terbaru .judul {
+    position: relative;
+    width: fit-content;
+    left: 0;
+    padding: 0px 5px;
+    font-size: 48px;
+    text-transform: capitalize;
+    margin: auto;
+    background-color: #f1f2f2;
+    /* border: 1px solid blue; */
+}
+
+.bungkus-resep-baru {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    /* border: 1px solid black; */
+    border-bottom: unset;
+    justify-content: space-between;
+}
+
+.resep-baru {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    width: fit-content;
+    text-decoration: none;
+    color: unset;
+    /* border: 1px solid black; */
+}
+
+.resep-baru:hover .nama {
+    text-decoration: underline;
+}
+
+.resep-baru .nama {
+    font-weight: 600;
+    /* border: 1px solid black; */
+    text-align: center;
+}
+
+.resep-baru .acara {
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, .4);
+}
+
+.resep-baru .image {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.resep-baru .image img{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slide-nav {
+    display: none;
+    margin: 0vw auto 0 auto;
+    width: 80vw;
+    justify-content: center;
+    border-radius: 0 0 50px 50px;
+    overflow: hidden;
+    border-top: unset;
+}
+
+.slide-nav .left, .right {
+    cursor: pointer;
+    padding: 5vw 5vw;
+    border: none;
+    width: 50%;
+    background-color: transparent;
+    transition: 500ms;
+}
+
+.slide-nav .left:hover, .right:hover {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.slide-nav .left {
+    /* position: absolute; */
+    /* left: 1.2vw; */
+}
+
+.slide-nav .right {
+    /* position: absolute; */
+    /* right: 1.2vw; */
+}
+
+.slide-nav i {
+    font-size: 10vw;
+}
+
+.slide-indicator {
+    position: absolute;
+    top: 13vw;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%);
+    display: none;
+    justify-content: center;
+    column-gap: 5vw;
+    width: fit-content;
+    height: fit-content;
+    /* border: 1px solid blue; */
+}
+
+.slide-indicator .dot {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, .4);
+    transition: 250ms;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 240px;
+    /* background-color: red; */
+}
+
+.footer-links {
+    width: 100%;
+    height: 140px;
+    background-color: red;
+}
+
+.copyright {
+    width: 100%;
+    height: 100px;
+    background-color: #333333;
+}
+
+/* Main ends */
+
+
+@media (max-width: 1140px) {
+    main {
+        width: 740px;
+    }
+
+    .all-trend {
+        width: 740px;
+    }
+
+    .log-fav {
+        left: unset;
+        right: 100px;
+        top: 21px;
+    }
+
+    .indicator {
+        display: none;
+    }
+
+    .sosmed {
+        display: none;
+    }
+
+    .search-nav span {
+        display: none;
+    }
+
+    .hero-text a:first-of-type {
+        width: 480px;
+    }
+
+    .search-overlay a {
+        margin-left: 560px;
+    }
+
+    .search-overlay form {
+        width: 600px;
+    }
+
+    .trend-image {
+        width: 100%;
+        height: 200px;
+    }             
+    
+    .sub.trend .trend-image {
+        height: 180px;
+    }
+
+    .tips-tricks {
+        width: 740px;
+    }
+
+    .tips-tricks-image {
+        /* border: 2px solid blue; */
+    }
+
+    .desc-tips-tricks {
+        /* font-size: 28px; */
+    }
+
+    .resep-terbaru {
+        height: fit-content;
+    }
+
+    .rata-lagi {
+        width: 740px;
+    }
+
+    .bungkus-resep-baru {
+        width: 80%;
+        justify-content: center;
+        column-gap: 20px;
+    }
+
+@media (max-width: 768px) {
+
+    main {
+        width: 100%;
+    }
+
+    .judul {
+        position: absolute;
+        left: 60px;
+    }
+
+    .hero-text {
+        width: 80%;
+    }
+
+    .hero-text h2 {
+        font-size: 30px;
+    }
+
+    .hero-text a:first-of-type {
+        width: 100%;
+    }
+
+    .search-overlay a {
+        top: 0;
+        right: 0;
+        margin: 20px;
+    }
+
+    .search-overlay form {
+        top: 40px;
+        width: 95%;
+        height: 50px;
+    }
+
+    .search-overlay form button, input {
+        font-size: 20px;
+    }
+    .search-overlay form button { width: 4%; }
+    .search-overlay form input { width: 94%; }
+
+    .all-trend {
+        /* position: relative; */
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .sub-judul-trend {
+        font-size: 6vw;
+        width: fit-content;
+    }
+
+    .trend {
+        width: 100%;
+    }
+
+    .trend-image {
+        width: 90vw;
+        height: 50vw;
+    }
+
+    .desc-trend {
+        width: 80vw;
+        height: fit-content;
+        margin: -8vw auto 0px auto;
+    }
+
+    .desc-trend span:first-of-type {
+        font-size: 5vw;
+    }
+
+    .desc-trend span:last-of-type {
+        font-size: 5vw;
+    }
+
+    .sub.trend {
+        width: 100%;
+    }
+
+    .divider {
+        display: block;
+        margin: 20px 0px;
+    }
+
+    .sub.trend a {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .sub.trend .trend-image {
+        margin: unset;
+        width: 50vw;
+        height: 20vw;
+    }
+
+    .sub.trend .trend-image img {
+        width: 30vw;
+        height: 20vw;
+    }
+
+    .sub.trend .desc-trend {
+        margin: unset;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+
+    .sub.trend .desc-trend span {    
+        margin: unset;
+    }
+
+    .sub.trend .desc-trend span:first-of-type {
+        width: fit-content;
+        margin: auto;
+        text-align: start;
+        font-size: 5vw;
+        padding: unset;
+    }
+    
+    .sub.trend .desc-trend hr {
+        width: 80%;
+        margin: 1vw auto;
+    }
+
+    .sub.trend .desc-trend span:last-of-type {
+        font-size: 4.5vw;
+        font-weight: 600;
+    }
+
+    .tips-tricks {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .tilt-divider {
+        display: none;
+    }
+
+    .tips-tricks .upper {
+        padding: 1.5vw 4vw;
+        font-size: 5vw;
+        top: -5vw;
+    }
+
+    .tips-tricks-image {
+        width: 90vw;
+        height: 50vw;
+        /* border: unset; */
+    }
+    .tips-tricks-image img{
+        width: 100%;
+        /* height: auto; */
+    }
+
+    .desc-tips-tricks {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        padding: unset;
+    }
+
+    .desc-tips-tricks a:first-of-type{
+        font-size: 26px;
+        /* border: 1px solid black; */
+    }
+
+    .desc-tips-tricks .divider-judul {
+        display: block;
+        margin-top: -10px;
+    }
+
+    .desc-tips-tricks span { 
+        display: none;
+    }
+
+    .desc-tips-tricks .tampil-lanjut {
+        display: none;
+    }
+
+    .other-tips-tricks {
+        width: 100%;
+    }
+
+    .other-tips-tricks .tampil-lanjut {
+        display: block;
+        width: fit-content;
+        margin: auto;
+    }
+    
+    .sub-tips-tricks .image {
+        display: none;
+    }
+
+    .sub-tips-tricks span {
+        margin: auto;
+        width: fit-content;
+        text-align: center;
+        text-align-last: center;
+    }
+
+    .resep-terbaru {
+        padding-bottom: 110vw;
+    }
+
+    .rata-lagi {
+        width: 100%;
+    }
+
+    .bungkus-judul {
+        margin-top: 6vw;
+        margin-bottom: unset;
+    }
+
+    .resep-terbaru .judul {
+        font-size: 8vw;
+    }
+
+    .bungkus-resep-baru {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        column-gap: unset;
+        justify-content: flex-start;
+        margin-top: 4vw;
+        padding-bottom: 4vw;
+        width: 80vw;
+        border-radius: 50px 50px 0 0;
+        overflow: hidden;
+    }
+
+    .resep-baru{
+        position: relative;
+        left: 0%;
+        width: 100%;
+        row-gap: 2vw;
+        transition: 1s;
+    }
+
+    .resep-baru .image {
+        margin: 5vw 10vw;
+        width: 60vw;
+        height: 60vw;
+        border: unset;
+    }
+
+    .resep-baru .nama {
+        font-size: 8vw;
+    }
+
+    .resep-baru .acara {
+        font-size: 6vw;
+    }
+
+    .slide-nav {
+        display: flex;
+    }
+
+    .slide-indicator {
+        display: flex;
+    }
+
+    footer {
+        height: 100vw;
+    }
+}
+}
